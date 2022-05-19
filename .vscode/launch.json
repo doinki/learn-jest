@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "name": "Debug Jest Tests",
+      "request": "launch",
+      "runtimeArgs": ["run", "--inspect-brk", "jest", "--runInBand"],
+      "runtimeExecutable": "yarn",
+      "type": "node"
+    }
+  ],
+  "version": "0.2.0"
+}
