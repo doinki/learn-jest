@@ -6,7 +6,7 @@ describe.each([
   [1, 1, 2],
   [1, 2, 3],
   [2, 1, 3],
-])('.add(%i, %i)', (a, b, expected) => {
+])('.add(%i, %i)', (a: number, b: number, expected: number) => {
   test(`returns ${expected}`, () => {
     expect(sum(a, b)).toBe(expected);
   });
@@ -20,11 +20,17 @@ describe.each([
   });
 });
 
+interface TestCase {
+  a: number;
+  b: number;
+  expected: number;
+}
+
 describe.each([
   { a: 1, b: 1, expected: 2 },
   { a: 1, b: 2, expected: 3 },
   { a: 2, b: 1, expected: 3 },
-])('.add(%a, %b) %#', ({ a, b, expected }) => {
+])('.add(%a, %b) %#', ({ a, b, expected }: TestCase) => {
   test(`returns ${expected}`, () => {
     expect(sum(a, b)).toBe(expected);
   });
